@@ -1,0 +1,34 @@
+{
+  "name": "javers-admin-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.17.0",
+    "material-ui": "^1.0.0-beta.17",
+    "material-ui-icons": "^1.0.0-beta.17",
+    "prop-types": "latest",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "json-server": "^0.12.0",
+    "react-scripts": "1.0.14",
+    "gh-pages": "^1.0.0"
+  },
+  "proxy": {
+    "/api/entities": {
+      "target": "http://localhost:4000/entites"
+    }
+  },
+  "scripts": {
+    "start": "json-server --watch mock/db.json --port 4000 & react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "jar": "PUBLIC_URL=/javers-admin/ react-scripts build && npm run compress",
+    "compress": "cp -R build javers-admin-frontend && jar cf javers-admin-frontend-1.0.jar javers-admin-frontend && rm -Rf javers-admin-frontend",
+    "predeploy": "PUBLIC_URL=https://javers.github.io/javers-admin-frontend/ react-scripts build",
+    "deploy": "gh-pages -d build"
+  }
+}

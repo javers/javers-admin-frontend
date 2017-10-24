@@ -1,0 +1,16 @@
+.menu-drawer-container {
+    max-width: 300px;
+}
+
+.menu-drawer-container .menu-drawer {
+    padding-top: 0;
+    background-color: #fff;
+}
+
+.menu-drawer-container .menu-drawer .header {
+    background: #eee;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 16px;
+    text-transform: uppercase;
+}

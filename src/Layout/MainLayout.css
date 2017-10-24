@@ -1,0 +1,30 @@
+#main-layout {
+    height: 100%;
+}
+
+.main-layout__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+    height: 100%;
+    margin-top: 60px;
+}
+
+.main-layout__sidebar {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    min-width: 300px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.main-layout__content {
+    order: 0;
+    flex: 1 1 auto;
+    align-self: auto;
+    padding: 30px;
+}

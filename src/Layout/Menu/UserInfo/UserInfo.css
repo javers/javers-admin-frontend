@@ -1,0 +1,11 @@
+.user-info {
+    padding: 15px;
+    height: 110px;
+    background: #333;
+}
+
+.user-info p {
+    padding-top: 10px;
+    color: #fff;
+    font-size: 0.9em;
+}

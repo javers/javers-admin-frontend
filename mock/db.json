@@ -1,0 +1,22 @@
+{
+  "entities": [
+    {
+      "id": "org.javers.organization.structure.domain.Employee",
+      "name": "Employee",
+      "count": 10,
+      "snapshots": 200
+    },
+    {
+      "id": "org.javers.organization.structure.domain.Hierarchy",
+      "name": "Hierarchy",
+      "count": 2,
+      "snapshots": 10
+    },
+    {
+      "id": "org.javers.organization.structure.domain.Person",
+      "name": "Person",
+      "count": 12,
+      "snapshots": 100
+    }
+  ]
+}
