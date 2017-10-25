@@ -29,7 +29,8 @@
     "eject": "react-scripts eject",
     "jar": "PUBLIC_URL=/javers-admin/ react-scripts build && npm run compress",
     "compress": "cp -R build javers-admin-frontend && jar cf javers-admin-frontend-1.0.jar javers-admin-frontend && rm -Rf javers-admin-frontend",
-    "predeploy": "PUBLIC_URL=https://javers.github.io/javers-admin-frontend/ react-scripts build && mkdir ./build/api && json -f ./mock/db.json entities > ./build/api/entites",
+    "predeploy": "PUBLIC_URL=https://javers.org/javers-admin-frontend/ react-scripts build && npm run make-moks",
+    "make-moks": "mkdir ./build/api && json -f ./mock/db.json entities > ./build/api/entities",
     "deploy": "gh-pages -d build"
   }
 }
