@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import Grid from 'material-ui/Grid';
-import Card, {CardContent, CardHeader, CardActions} from "material-ui/Card";
-import Typography from "material-ui/Typography";
+import Card, {CardContent, CardHeader} from "material-ui/Card";
 import axios from 'axios';
-import moment from 'moment';
 import PropTypes from 'prop-types';
-import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
+import Table, {TableBody, TableCell, TableHead, TableRow} from 'material-ui/Table';
+import ObjectMetadata from "./ObjectMetadata";
+import './ObjectBrowser.css';
 
 export default class ObjectBrowser extends Component {
 
@@ -18,7 +18,7 @@ export default class ObjectBrowser extends Component {
     };
 
     componentDidMount() {
-        axios.get(`api/entities/${this.props.entityId}/`).then((response) => {
+        axios.get(`${process.env.PUBLIC_URL}/api/entities/${this.props.entityId}/`).then((response) => {
             this.setState({objects: response.data});
         }).catch((error) => {
             console.error(error);
@@ -36,7 +36,7 @@ export default class ObjectBrowser extends Component {
     toCard() {
         return object =>
             <Grid item xs key={object.globalId.cdoId}>
-                <Card>
+                <Card className="entity-object">
                     <CardHeader title={object.globalId.cdoId}/>
                     <CardContent>
                         <Table>
@@ -50,7 +50,7 @@ export default class ObjectBrowser extends Component {
                                 {Object.keys(object.state).map(key => {
                                     return (
                                         <TableRow key={key}>
-                                            <TableCell>{key}</TableCell>
+                                            <TableCell><strong>{key}</strong></TableCell>
                                             <TableCell>{object.state[key]}</TableCell>
                                         </TableRow>
                                     );
@@ -58,13 +58,9 @@ export default class ObjectBrowser extends Component {
                             </TableBody>
                         </Table>
                     </CardContent>
-                    <CardActions>
-                        <Typography type="body1">
-                            <strong>{object.commitMetadata.author}</strong>&nbsp;
-                            modified {moment(object.commitMetadata.commitDate).fromNow()}
-                        </Typography>
-                    </CardActions>
-
+                    <ObjectMetadata author={object.commitMetadata.author}
+                                    commitDate={object.commitMetadata.commitDate}
+                    />
                 </Card>
             </Grid>;
     }

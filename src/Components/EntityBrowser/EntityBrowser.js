@@ -3,13 +3,12 @@ import Grid from 'material-ui/Grid';
 import Card, {CardContent, CardHeader} from "material-ui/Card";
 import Typography from "material-ui/Typography";
 import axios from 'axios';
-import ObjectBrowser from "./ObjectBrowser";
+import {withRouter} from "react-router-dom";
 
-export default class EntityBrowser extends Component {
+class EntityBrowser extends Component {
 
     state = {
         entities: [],
-        selectedEntityId : null
     };
 
     componentDidMount() {
@@ -21,10 +20,6 @@ export default class EntityBrowser extends Component {
     }
 
     render() {
-        if (this.state.selectedEntityId) {
-            return <ObjectBrowser entityId={this.state.selectedEntityId}/>
-        }
-
         const cards = this.state.entities.map(this.toCard());
         return (
             <Grid container>
@@ -36,7 +31,7 @@ export default class EntityBrowser extends Component {
     toCard() {
         return entity =>
             <Grid item xs key={entity.id}>
-                <Card onClick={() => this.setState({selectedEntityId: entity.id})}>
+                <Card onClick={() => this.props.history.push(`/entities/${entity.id}`)}>
                     <CardHeader title={entity.name}/>
                     <CardContent>
                         <Typography type="body1">
@@ -50,3 +45,5 @@ export default class EntityBrowser extends Component {
             </Grid>;
     }
 }
+
+export default withRouter(EntityBrowser);

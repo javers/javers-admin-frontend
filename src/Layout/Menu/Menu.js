@@ -12,7 +12,7 @@ export default withRouter((props) => {
             <UserInfo/>
             <List className="menu-drawer">
                 <ListItem className="header">Main navigation</ListItem>
-                <ListItem button onClick={() => props.history.push('/')}>
+                <ListItem button onClick={() => props.history.push('/entities')}>
                     <ListItemIcon>
                         <FaceIcon/>
                     </ListItemIcon>
