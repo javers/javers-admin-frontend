@@ -7,6 +7,7 @@
     "json": "^9.0.6",
     "material-ui": "^1.0.0-beta.17",
     "material-ui-icons": "^1.0.0-beta.17",
+    "moment": "^2.19.1",
     "prop-types": "latest",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
@@ -18,8 +19,11 @@
     "gh-pages": "^1.0.0"
   },
   "proxy": {
-    "/api/entities": {
-      "target": "http://localhost:4666/entites"
+    "/api/": {
+      "target": "http://localhost:4666/",
+      "pathRewrite": {
+        "^/api": "/"
+      }
     }
   },
   "scripts": {
