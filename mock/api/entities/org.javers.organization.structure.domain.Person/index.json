@@ -1,0 +1,420 @@
+[
+  {
+    "commitMetadata": {
+      "author": "mr Bean",
+      "properties": [],
+      "commitDate": "2017-10-25T12:04:54.648",
+      "id": 14.00
+    },
+    "globalId": {
+      "entity": "org.javers.organization.structure.domain.Person",
+      "cdoId": 13
+    },
+    "state": {
+      "firstName": "Kenny",
+      "lastName": "McCormick",
+      "sex": "MALE",
+      "id": 13,
+      "position": "DEVELOPER",
+      "salary": 9000
+    },
+    "changedProperties": [
+      "firstName",
+      "lastName",
+      "sex",
+      "id",
+      "position",
+      "salary"
+    ],
+    "type": "INITIAL",
+    "version": 1
+  },
+  {
+    "commitMetadata": {
+      "author": "mr Bean",
+      "properties": [],
+      "commitDate": "2017-10-25T12:04:54.641",
+      "id": 13.00
+    },
+    "globalId": {
+      "entity": "org.javers.organization.structure.domain.Person",
+      "cdoId": 12
+    },
+    "state": {
+      "firstName": "Eric",
+      "lastName": "Cartman",
+      "sex": "MALE",
+      "id": 12,
+      "position": "DEVELOPER",
+      "salary": 9000
+    },
+    "changedProperties": [
+      "firstName",
+      "lastName",
+      "sex",
+      "id",
+      "position",
+      "salary"
+    ],
+    "type": "INITIAL",
+    "version": 1
+  },
+  {
+    "commitMetadata": {
+      "author": "mr Bean",
+      "properties": [],
+      "commitDate": "2017-10-25T12:04:54.626",
+      "id": 12.00
+    },
+    "globalId": {
+      "entity": "org.javers.organization.structure.domain.Person",
+      "cdoId": 11
+    },
+    "state": {
+      "firstName": "Kyle",
+      "lastName": "Broflovski",
+      "sex": "MALE",
+      "id": 11,
+      "position": "DEVELOPER",
+      "salary": 9000
+    },
+    "changedProperties": [
+      "firstName",
+      "lastName",
+      "sex",
+      "id",
+      "position",
+      "salary"
+    ],
+    "type": "INITIAL",
+    "version": 1
+  },
+  {
+    "commitMetadata": {
+      "author": "mr Bean",
+      "properties": [],
+      "commitDate": "2017-10-25T12:04:54.601",
+      "id": 11.00
+    },
+    "globalId": {
+      "entity": "org.javers.organization.structure.domain.Person",
+      "cdoId": 10
+    },
+    "state": {
+      "firstName": "Stan",
+      "lastName": "Marsh",
+      "sex": "MALE",
+      "id": 10,
+      "position": "DEVELOPER",
+      "salary": 9000
+    },
+    "changedProperties": [
+      "firstName",
+      "lastName",
+      "sex",
+      "id",
+      "position",
+      "salary"
+    ],
+    "type": "INITIAL",
+    "version": 1
+  },
+  {
+    "commitMetadata": {
+      "author": "mr Bean",
+      "properties": [],
+      "commitDate": "2017-10-25T12:04:54.593",
+      "id": 10.00
+    },
+    "globalId": {
+      "entity": "org.javers.organization.structure.domain.Person",
+      "cdoId": 9
+    },
+    "state": {
+      "firstName": "Uncle",
+      "lastName": "Bob",
+      "sex": "MALE",
+      "id": 9,
+      "position": "CTO",
+      "salary": 20000
+    },
+    "changedProperties": [
+      "firstName",
+      "lastName",
+      "sex",
+      "id",
+      "position",
+      "salary"
+    ],
+    "type": "INITIAL",
+    "version": 1
+  },
+  {
+    "commitMetadata": {
+      "author": "mr Bean",
+      "properties": [],
+      "commitDate": "2017-10-25T12:04:54.586",
+      "id": 9.00
+    },
+    "globalId": {
+      "entity": "org.javers.organization.structure.domain.Person",
+      "cdoId": 8
+    },
+    "state": {
+      "firstName": "Crazy",
+      "lastName": "Stefan",
+      "sex": "MALE",
+      "id": 8,
+      "position": "IT_MANAGER",
+      "salary": 17000
+    },
+    "changedProperties": [
+      "firstName",
+      "lastName",
+      "sex",
+      "id",
+      "position",
+      "salary"
+    ],
+    "type": "INITIAL",
+    "version": 1
+  },
+  {
+    "commitMetadata": {
+      "author": "mr Bean",
+      "properties": [],
+      "commitDate": "2017-10-25T12:04:54.577",
+      "id": 8.00
+    },
+    "globalId": {
+      "entity": "org.javers.organization.structure.domain.Person",
+      "cdoId": 7
+    },
+    "state": {
+      "firstName": "Mad",
+      "lastName": "Kaz",
+      "sex": "MALE",
+      "id": 7,
+      "position": "IT_MANAGER",
+      "salary": 16000
+    },
+    "changedProperties": [
+      "firstName",
+      "lastName",
+      "sex",
+      "id",
+      "position",
+      "salary"
+    ],
+    "type": "INITIAL",
+    "version": 1
+  },
+  {
+    "commitMetadata": {
+      "author": "mr Bean",
+      "properties": [],
+      "commitDate": "2017-10-25T12:04:54.564",
+      "id": 7.00
+    },
+    "globalId": {
+      "entity": "org.javers.organization.structure.domain.Person",
+      "cdoId": 6
+    },
+    "state": {
+      "firstName": "Charlie",
+      "lastName": "Big",
+      "sex": "MALE",
+      "id": 6,
+      "position": "TEAM_LEAD",
+      "salary": 15000
+    },
+    "changedProperties": [
+      "firstName",
+      "lastName",
+      "sex",
+      "id",
+      "position",
+      "salary"
+    ],
+    "type": "INITIAL",
+    "version": 1
+  },
+  {
+    "commitMetadata": {
+      "author": "mr Bean",
+      "properties": [],
+      "commitDate": "2017-10-25T12:04:54.553",
+      "id": 6.00
+    },
+    "globalId": {
+      "entity": "org.javers.organization.structure.domain.Person",
+      "cdoId": 5
+    },
+    "state": {
+      "firstName": "Eva",
+      "lastName": "Celebrimbor",
+      "sex": "FEMALE",
+      "id": 5,
+      "position": "TEAM_LEAD",
+      "salary": 14000
+    },
+    "changedProperties": [
+      "firstName",
+      "lastName",
+      "sex",
+      "id",
+      "position",
+      "salary"
+    ],
+    "type": "INITIAL",
+    "version": 1
+  },
+  {
+    "commitMetadata": {
+      "author": "mr Bean",
+      "properties": [],
+      "commitDate": "2017-10-25T12:04:54.543",
+      "id": 5.00
+    },
+    "globalId": {
+      "entity": "org.javers.organization.structure.domain.Person",
+      "cdoId": 4
+    },
+    "state": {
+      "firstName": "Lucy",
+      "lastName": "Valinor",
+      "sex": "FEMALE",
+      "id": 4,
+      "position": "TEAM_LEAD",
+      "salary": 13000
+    },
+    "changedProperties": [
+      "firstName",
+      "lastName",
+      "sex",
+      "id",
+      "position",
+      "salary"
+    ],
+    "type": "INITIAL",
+    "version": 1
+  },
+  {
+    "commitMetadata": {
+      "author": "mr Bean",
+      "properties": [],
+      "commitDate": "2017-10-25T12:04:54.525",
+      "id": 4.00
+    },
+    "globalId": {
+      "entity": "org.javers.organization.structure.domain.Person",
+      "cdoId": 3
+    },
+    "state": {
+      "firstName": "Meriadoc",
+      "lastName": "Brandybuck",
+      "sex": "MALE",
+      "id": 3,
+      "position": "DEVELOPER",
+      "salary": 12000
+    },
+    "changedProperties": [
+      "firstName",
+      "lastName",
+      "sex",
+      "id",
+      "position",
+      "salary"
+    ],
+    "type": "INITIAL",
+    "version": 1
+  },
+  {
+    "commitMetadata": {
+      "author": "mr Bean",
+      "properties": [],
+      "commitDate": "2017-10-25T12:04:54.513",
+      "id": 3.00
+    },
+    "globalId": {
+      "entity": "org.javers.organization.structure.domain.Person",
+      "cdoId": 2
+    },
+    "state": {
+      "firstName": "Sam",
+      "lastName": "Gamgee",
+      "sex": "MALE",
+      "id": 2,
+      "position": "DEVELOPER",
+      "salary": 11000
+    },
+    "changedProperties": [
+      "firstName",
+      "lastName",
+      "sex",
+      "id",
+      "position",
+      "salary"
+    ],
+    "type": "INITIAL",
+    "version": 1
+  },
+  {
+    "commitMetadata": {
+      "author": "mr Bean",
+      "properties": [],
+      "commitDate": "2017-10-25T12:04:54.493",
+      "id": 2.00
+    },
+    "globalId": {
+      "entity": "org.javers.organization.structure.domain.Person",
+      "cdoId": 1
+    },
+    "state": {
+      "firstName": "Bilbo",
+      "lastName": "Baggins",
+      "sex": "MALE",
+      "id": 1,
+      "position": "SCRUM_MASTER",
+      "salary": 10000
+    },
+    "changedProperties": [
+      "firstName",
+      "lastName",
+      "sex",
+      "id",
+      "position",
+      "salary"
+    ],
+    "type": "INITIAL",
+    "version": 1
+  },
+  {
+    "commitMetadata": {
+      "author": "mr Bean",
+      "properties": [],
+      "commitDate": "2017-10-25T12:04:54.397",
+      "id": 1.00
+    },
+    "globalId": {
+      "entity": "org.javers.organization.structure.domain.Person",
+      "cdoId": 0
+    },
+    "state": {
+      "firstName": "Frodo",
+      "lastName": "Baggins",
+      "sex": "MALE",
+      "position": "DEVELOPER",
+      "salary": 9000
+    },
+    "changedProperties": [
+      "firstName",
+      "lastName",
+      "sex",
+      "position",
+      "salary"
+    ],
+    "type": "INITIAL",
+    "version": 1
+  }
+]

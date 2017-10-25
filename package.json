@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "axios": "^0.17.0",
-    "json": "^9.0.6",
     "material-ui": "^1.0.0-beta.17",
     "material-ui-icons": "^1.0.0-beta.17",
     "moment": "^2.19.1",
@@ -14,27 +13,27 @@
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
-    "json-server": "^0.12.0",
+    "gh-pages": "^1.0.0",
     "react-scripts": "1.0.14",
-    "gh-pages": "^1.0.0"
+    "renamer": "^0.6.1"
   },
   "proxy": {
     "/api/": {
       "target": "http://localhost:4666/",
       "pathRewrite": {
-        "^/api": "/"
+        "$|/$": "/index.json"
       }
     }
   },
   "scripts": {
-    "start": "json-server --watch mock/db.json --port 4666 & react-scripts start",
+    "start": "http-server mock -p 4666 -e json -c-1 & react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "jar": "PUBLIC_URL=/javers-admin/ react-scripts build && npm run compress",
     "compress": "cp -R build javers-admin-frontend && jar cf javers-admin-frontend-1.0.jar javers-admin-frontend && rm -Rf javers-admin-frontend",
-    "predeploy": "PUBLIC_URL=https://javers.org/javers-admin-frontend/ react-scripts build && npm run make-moks",
-    "make-moks": "mkdir ./build/api && json -f ./mock/db.json entities > ./build/api/entities",
+    "predeploy": "PUBLIC_URL=https://javers.org/javers-admin-frontend/ react-scripts build && npm run make-mocks",
+    "make-mocks": "cp -a ./mock/. ./build/ && renamer --find '.json' --replace '.html' 'build/api/**/*.json'",
     "deploy": "gh-pages -d build"
   }
 }

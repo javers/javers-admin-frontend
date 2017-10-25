@@ -19,7 +19,7 @@ export default class ObjectBrowser extends Component {
 
     componentDidMount() {
         axios.get(`api/entities/${this.props.entityId}/`).then((response) => {
-            this.setState({objects: response.data.objects});
+            this.setState({objects: response.data});
         }).catch((error) => {
             console.error(error);
         });
