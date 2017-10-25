@@ -6,7 +6,7 @@ import {AppBar, Menu, MainLayout} from "./Layout";
 import {AboutView, EntitiesView} from "./Views";
 
 ReactDOM.render(
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename={getLocation(process.env.PUBLIC_URL)}>
         <MainLayout toolbar={<AppBar/>} sidebar={<Menu/>}>
             <Switch>
                 <Route exact path="/" component={EntitiesView}/>
@@ -15,3 +15,9 @@ ReactDOM.render(
             </Switch>
         </MainLayout>
     </Router>, document.getElementById('root'));
+
+function getLocation(url) {
+    const l = document.createElement("a");
+    l.href = url;
+    return l.pathname;
+};
