@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import Grid from 'material-ui/Grid';
-import Card, {CardContent, CardHeader} from "material-ui/Card";
+import Card, {CardContent, CardHeader, CardActions} from "material-ui/Card";
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import Table, {TableBody, TableCell, TableHead, TableRow} from 'material-ui/Table';
 import ObjectMetadata from "./ObjectMetadata";
-import './ObjectBrowser.css';
+import './ObjectList.css';
 
 export default class ObjectBrowser extends Component {
 
@@ -37,7 +37,7 @@ export default class ObjectBrowser extends Component {
         return object =>
             <Grid item xs key={object.globalId.cdoId}>
                 <Card className="entity-object">
-                    <CardHeader title={object.globalId.cdoId}/>
+                    <CardHeader title={`id: ${object.globalId.cdoId}`}/>
                     <CardContent>
                         <Table>
                             <TableHead>
@@ -51,7 +51,7 @@ export default class ObjectBrowser extends Component {
                                     return (
                                         <TableRow key={key}>
                                             <TableCell><strong>{key}</strong></TableCell>
-                                            <TableCell>{object.state[key]}</TableCell>
+                                            <TableCell>{JSON.stringify(object.state[key])}</TableCell>
                                         </TableRow>
                                     );
                                 })}

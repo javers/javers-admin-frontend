@@ -1,3 +1,7 @@
+.entity-object {
+    cursor: pointer;
+}
+
 .entity-object p.entity-object__metadata {
     background-color: #333;
     padding: 10px;

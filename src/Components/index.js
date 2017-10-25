@@ -1,5 +1,5 @@
-import EntityBrowser from "./EntityBrowser/EntityBrowser";
+import EntityList from "./EntityBrowser/EntityList";
 
 export {
-    EntityBrowser,
+    EntityList,
 }

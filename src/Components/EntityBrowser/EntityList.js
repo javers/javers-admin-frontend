@@ -4,6 +4,7 @@ import Card, {CardContent, CardHeader} from "material-ui/Card";
 import Typography from "material-ui/Typography";
 import axios from 'axios';
 import {withRouter} from "react-router-dom";
+import './EntityList.css';
 
 class EntityBrowser extends Component {
 
@@ -31,7 +32,7 @@ class EntityBrowser extends Component {
     toCard() {
         return entity =>
             <Grid item xs key={entity.id}>
-                <Card onClick={() => this.props.history.push(`/entities/${entity.id}`)}>
+                <Card className="entity" onClick={() => this.props.history.push(`/entities/${entity.id}`)}>
                     <CardHeader title={entity.name}/>
                     <CardContent>
                         <Typography type="body1">

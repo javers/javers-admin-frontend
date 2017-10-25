@@ -1,8 +1,8 @@
 import React from 'react';
 import {Typography} from "material-ui";
-import {EntityBrowser} from "../Components";
+import {EntityList} from "../Components";
 import {Route, Switch} from 'react-router-dom'
-import ObjectBrowser from "../Components/EntityBrowser/ObjectBrowser";
+import ObjectBrowser from "../Components/EntityBrowser/ObjectsList";
 
 export default () => {
     return (
@@ -12,7 +12,7 @@ export default () => {
             <Switch>
                 <Route path="/entities/:id" render={(props) => <ObjectBrowser entityId={props.match.params.id}/>}/>
                 <Route>
-                    <EntityBrowser/>
+                    <EntityList/>
                 </Route>
             </Switch>
         </div>
