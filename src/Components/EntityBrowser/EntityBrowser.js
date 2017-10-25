@@ -13,7 +13,7 @@ export default class EntityBrowser extends Component {
     };
 
     componentDidMount() {
-        axios.get('api/entities').then((response) => {
+        axios.get('api/entities/').then((response) => {
             this.setState({entities: response.data});
         }).catch((error) => {
             console.error(error);
