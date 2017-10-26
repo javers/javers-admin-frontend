@@ -1,10 +1,47 @@
 .entity-object {
-    cursor: pointer;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.entity-object .entity-object__properties {
+    padding: 0;
+    flex: 1;
+}
+
+.entity-object .entity-object__properties ul {
+    padding: 0;
+    margin: 0;
+}
+
+.entity-object .entity-object__properties ul li {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    list-style: none;
+}
+
+.entity-object .entity-object__properties__table {
+    max-width: 250px;
+    min-width: 100%;
+}
+
+.entity-object .entity-object__properties__table__row {
+    height: 32px;
+}
+
+.entity-object .entity-object__id {
+    font-size: 0.8rem;
+    background-color: #EA4D1A;
+    padding: 10px;
+    color: #fff;
 }
 
 .entity-object p.entity-object__metadata {
+    font-size: 0.75rem;
     background-color: #333;
     padding: 10px;
     text-align: center;
     color: #fff;
+    margin-top: 10px;
 }

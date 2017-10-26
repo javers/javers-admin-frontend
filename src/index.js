@@ -6,8 +6,8 @@ import {AppBar, Menu, MainLayout} from "./Layout";
 import {AboutView, EntitiesView} from "./Views";
 
 ReactDOM.render(
-    <Router basename={getLocation(process.env.PUBLIC_URL)}>
-        <MainLayout toolbar={<AppBar/>} sidebar={<Menu/>}>
+    <Router>
+        <MainLayout toolbar={<AppBar handleMenuToggle={console.lgo}/>} sidebar={<Menu/>}>
             <Switch>
                 <Route exact path="/">
                     <Redirect to={"/entities"}/>
@@ -17,9 +17,3 @@ ReactDOM.render(
             </Switch>
         </MainLayout>
     </Router>, document.getElementById('root'));
-
-function getLocation(url) {
-    const l = document.createElement("a");
-    l.href = url;
-    return l.pathname;
-};

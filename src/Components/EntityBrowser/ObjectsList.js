@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import Grid from 'material-ui/Grid';
-import Card, {CardContent, CardHeader, CardActions} from "material-ui/Card";
+import Card, {CardContent} from "material-ui/Card";
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import Table, {TableBody, TableCell, TableHead, TableRow} from 'material-ui/Table';
 import ObjectMetadata from "./ObjectMetadata";
 import './ObjectList.css';
+import {Link, withRouter} from "react-router-dom";
 
-export default class ObjectBrowser extends Component {
+class ObjectList extends Component {
 
     static propTypes: {
         entityId: PropTypes.string.isRequired
@@ -27,7 +28,7 @@ export default class ObjectBrowser extends Component {
 
     render() {
         return (
-            <Grid container>
+            <Grid container alignContent="stretch">
                 {this.state.objects.map(this.toCard())}
             </Grid>
         );
@@ -37,11 +38,13 @@ export default class ObjectBrowser extends Component {
         return object =>
             <Grid item xs key={object.globalId.cdoId}>
                 <Card className="entity-object">
-                    <CardHeader title={`id: ${object.globalId.cdoId}`}/>
-                    <CardContent>
-                        <Table>
+                    <div className="entity-object__id">
+                        <span>id: <strong>{object.globalId.cdoId}</strong></span>
+                    </div>
+                    <CardContent className="entity-object__properties">
+                        <Table className="entity-object__properties__table">
                             <TableHead>
-                                <TableRow>
+                                <TableRow className="entity-object__properties__table__row">
                                     <TableCell>Property</TableCell>
                                     <TableCell>Value</TableCell>
                                 </TableRow>
@@ -49,9 +52,11 @@ export default class ObjectBrowser extends Component {
                             <TableBody>
                                 {Object.keys(object.state).map(key => {
                                     return (
-                                        <TableRow key={key}>
+                                        <TableRow key={`${object.commitMetadata.commitId}-${key}`}
+                                                  className="entity-object__properties__table__row">
                                             <TableCell><strong>{key}</strong></TableCell>
-                                            <TableCell>{JSON.stringify(object.state[key])}</TableCell>
+                                            <TableCell>{typeof(object.state[key]) === 'object' ?
+                                                <ul>{this.extractEntity(object.state[key], object.globalId.cdoId)}</ul> : object.state[key]}</TableCell>
                                         </TableRow>
                                     );
                                 })}
@@ -64,4 +69,17 @@ export default class ObjectBrowser extends Component {
                 </Card>
             </Grid>;
     }
+
+    extractEntity(value) {
+        if (Array.isArray(value)) {
+            return value.map(it => this.extractEntity(it));
+        }
+        return (
+            <li>
+                <Link to={`/entities/${value.entity}/${value.cdoId}`}>{value.cdoId}</Link>
+            </li>
+        );
+    }
 }
+
+export default withRouter(ObjectList);
