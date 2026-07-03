@@ -22,7 +22,7 @@ export default withRouter(({history, handleMenuToggle}) => {
                     <ListItemIcon>
                         <FaceIcon/>
                     </ListItemIcon>
-                    <ListItemText primary="Entites"/>
+                    <ListItemText primary="Entities"/>
                 </ListItem>
                 <ListItem button onClick={() => goTo('/about')}>
                     <ListItemIcon>
